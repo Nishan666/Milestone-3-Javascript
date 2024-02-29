@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sure</title>
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
+      integrity="sha384-M6P9JmJ3W1ywQhzTjrC5ihxDpBhaUK4NDxCdhoVv54BtfakTbH7Sk6yLd+2R/GY"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+      integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg sticky-md-top">
+      <div class="container-fluid px-md-4 mx-md-3">
+        <a class="navbar-brand" href="#"
+          ><img src="./images/logo.png" alt="Logo" width="60px" height="48px"
+        /></a>
+        <button
+          class="navbar-toggler btn navbar-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars navbar-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-md-flex justify-content-end w-100">
+            <ul class="navbar-nav mb-2 mb-lg-0 d-md-flex align-items-center">
+              <li class="nav-item width-nav">
+                <a
+                  id="nav-dashboard"
+                  class="nav-link d-md-flex align-items-center justify-content-center px-1 mx-2 inactive"
+                  aria-current="page"
+                  href="#"
+                >
+                  <img
+                    class="nav-img m-1"
+                    src="./images/navbar-icon-1.ico"
+                    alt=""
+                  />
+                  <span class="font-16 m-1 fw-medium text-light"
+                    >Dashboard</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item width-nav">
+                <a
+                  id="nav-pricing"
+                  class="nav-link d-md-flex align-items-center justify-content-center px-1 mx-2 active"
+                  href="#"
+                  onclick="toggleContent('pricing')"
+                >
+                  <img
+                    class="nav-img m-1"
+                    src="./images/navbar-icon-2.ico"
+                    alt=""
+                  />
+                  <span class="font-16 m-1 fw-medium text-light">Pricing</span>
+                </a>
+              </li>
+              <li class="nav-item width-nav">
+                <a
+                  id="nav-enquiry"
+                  class="nav-link d-md-flex align-items-center justify-content-center px-2 mx-2 inactive"
+                  href="#"
+                  onclick="toggleContent('enquiry')"
+                >
+                  <img
+                    class="nav-img m-1"
+                    src="./images/navbar-icon-3.ico"
+                    alt=""
+                  />
+                  <span class="font-16 m-1 fw-medium text-light"
+                    >Custom Enquiry</span
+                  >
+                </a>
+              </li>
+            </ul>
+            <a class="nav-link d-md-flex align-items-center ms-md-4" href="#">
+              <img
+                class="nav-img-profile"
+                src="./images/profile-pic-icon.ico"
+                alt=""
+              />
+              <img
+                class="nav-dropdown-img m-1"
+                src="./images/dropdown-icon.ico"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PRICING -->
+    <div id="pricing">
+      <!-- title -->
+      <div id="title" class="text-center">
+        <div class="p-4 text-light fw-medium fs-3">Pricing Plans</div>
+      </div>
+
+      <!-- main content -->
+      <div id="main-content" class="pb-4">
+        <div class="description mb-4">
+          <div class="font-35 text-center fw-semibold mb-2 pt-5">
+            <span class="d-blue-primary-color">Try </span>
+            <span class="main-text-color-g">FREE, UPGRADE</span>
+            <span class="d-blue-primary-color"> easy</span>
+          </div>
+          <div
+            class="font-16 d-blue-secondary-color text-center fw-light w-md-50 w-sm-100 px-md-5 px-2 pt-1 pb-4 mx-auto"
+          >
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            </span>
+            <br />
+            <span
+              >eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Bibendum</span
+            >
+          </div>
+        </div>
+
+        <div class="pricing">
+          <div class="container-fluid">
+            <div class="row mx-4">
+              <!-- **** -->
+              <div class="col-md-3 my-2">
+                <div id="card-1" class="card flex-fill">
+                  <div class="card-head px-3 py-2">
+                    <div class="card-head-s font-15">Plan</div>
+                    <div
+                      class="card-head-l d-blue-primary-color font-24 fw-medium"
+                    >
+                      Free
+                    </div>
+                  </div>
+                  <div id="free-pack" class="card-body px-2 pt-0">
+                    <div class="cost-1 rounded">
+                      <div class="container">
+                        <ul class="list-unstyled py-3">
+                          <li
+                            class="text-warning fw-medium text-center font-18"
+                          >
+                            $ 0/month
+                          </li>
+                          <li
+                            class="d-blue-primary-color fw-medium text-center font-14 mb-3"
+                          >
+                            05 Credits | 01 User
+                          </li>
+                          <li class="fw-medium text-center font-18">
+                            <button
+                              class="btn btn-warning w-100"
+                              data-toggle="modal"
+                              data-target="#popModelFree"
+                            >
+                              <span class="text-light fw-medium p-3"
+                                >Select Free Plan</span
+                              >
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="packages">
+                      <span class="d-blue-primary-color fw-medium"
+                        >Package Include:</span
+                      >
+                      <ul
+                        class="list-unstyled py-1 font-14 mb-0 d-blue-secondary-color"
+                      >
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Human-Verified Data</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Name</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Website</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Contact Name</span>
+                        </li>
+
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Business Email</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Contact Title</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 my-2">
+                <div id="card-4" class="card">
+                  <div class="card-head px-3 py-2">
+                    <div class="card-head-s font-15">Plan</div>
+                    <div class="card-head-l text-light font-24 fw-medium">
+                      Premium
+                    </div>
+                  </div>
+                  <div class="card-body px-2 pt-0">
+                    <div class="cost-2 rounded">
+                      <div class="container">
+                        <ul class="list-unstyled py-3">
+                          <li
+                            class="text-warning fw-medium text-center font-18"
+                          >
+                            $ 120/month
+                          </li>
+                          <li
+                            class="text-light fw-medium text-center font-14 mb-3"
+                          >
+                            300 Credits
+                          </li>
+                          <li class="fw-medium text-center font-18">
+                            <button
+                              class="btn btn-warning w-100"
+                              data-toggle="modal"
+                              data-target="#popModelPremium"
+                            >
+                              <span class="text-light fw-medium p-3"
+                                >Select Premium Plan</span
+                              >
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="packages">
+                      <span class="text-light fw-medium">Package Include:</span>
+                      <ul
+                        class="list-unstyled py-1 font-14 mb-0 text-light show-more-packages-premium"
+                      >
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Human-Verified Data</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Name</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Website</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Contact Name</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Business Email</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Contact Title</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Contact Direct Line </span
+                          ><span class="off-white font-14">
+                            &nbsp;(Wherever Possible)</span
+                          >
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>LinkedIn Social Handle</span>
+                        </li>
+                        <!-- **** -->
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Twitter Social Handle</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Facebook Social Handle</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Phone</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ Address</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ City</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ State</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ Zip</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ Country</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Industry</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Sub Industry</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Revenue Size</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Employee Size</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Job Level</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Seniority level</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Information</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Type</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Founded Year</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>SIC Code</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>NAICS Code</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>News & Media</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Products</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Technology User</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Acquisitions & Subsidiaries</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Funding</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Top Competitors</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Fortune</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Export contacts</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/circle.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Assign the account manager</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/circle.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>*24*7 Support on priority</span>
+                        </li>
+                      </ul>
+
+                      <a
+                        class="text-warning link-underline-warning fw-light cursor-pointer"
+                        onclick="toggleMorePackagesPremium()"
+                      >
+                        See More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 my-2">
+                <div id="card-4" class="card">
+                  <div class="card-head px-3 py-2">
+                    <div class="card-head-s font-15">Plan</div>
+                    <div class="card-head-l text-light font-24 fw-medium">
+                      Enterprise
+                    </div>
+                  </div>
+                  <div class="card-body px-2 pt-0">
+                    <div class="cost-2 rounded">
+                      <div class="container">
+                        <ul class="list-unstyled py-3">
+                          <li
+                            class="text-warning fw-medium text-center font-18"
+                          >
+                            $ 140/month
+                          </li>
+                          <li
+                            class="text-light fw-medium text-center font-14 mb-3"
+                          >
+                            400 Credits
+                          </li>
+                          <li class="fw-medium text-center font-18">
+                            <button
+                              class="btn btn-warning w-100"
+                              data-toggle="modal"
+                              data-target="#popModelEnterprise"
+                            >
+                              <span class="text-light fw-medium p-3"
+                                >Select Enterprise Plan</span
+                              >
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="packages">
+                      <span class="text-light fw-medium">Package Include:</span>
+                      <ul
+                        class="list-unstyled py-1 font-14 mb-0 text-light show-more-packages-enterprise"
+                      >
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Human-Verified Data</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Name</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Website</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Contact Name</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Business Email</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Contact Title</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Contact Direct Line </span
+                          ><span class="off-white font-14">
+                            &nbsp;(Wherever Possible)</span
+                          >
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>LinkedIn Social Handle</span>
+                        </li>
+                        <!-- **** -->
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Twitter Social Handle</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Facebook Social Handle</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Phone</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ Address</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ City</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ State</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ Zip</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ Country</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Industry</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Sub Industry</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Revenue Size</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Employee Size</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Job Level</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Seniority level</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Information</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Type</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Founded Year</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>SIC Code</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>NAICS Code</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>News & Media</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Products</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Technology User</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Acquisitions & Subsidiaries</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Funding</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Top Competitors</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Fortune</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Export contacts</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/circle.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Assign the account manager</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/circle.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>*24*7 Support on priority</span>
+                        </li>
+                      </ul>
+
+                      <a
+                        class="text-warning link-underline-warning fw-light cursor-pointer"
+                        onclick="toggleMorePackagesEnterprise()"
+                      >
+                        See More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 my-2">
+                <div id="card-4" class="card">
+                  <div class="card-head px-3 py-2">
+                    <div class="card-head-s font-15">Plan</div>
+                    <div class="card-head-l text-light font-24 fw-medium">
+                      Custom
+                    </div>
+                  </div>
+                  <div class="card-body px-2 pt-0">
+                    <div class="cost-2 rounded">
+                      <div class="container">
+                        <ul class="list-unstyled py-3">
+                          <li
+                            class="text-light fw-medium text-center font-14 mb-3 px-3 py-1"
+                          >
+                            Talk with us and modified your plan as per your
+                            requirements.
+                          </li>
+                          <li class="fw-medium text-center font-18">
+                            <button class="btn btn-warning w-100">
+                              <span class="text-light fw-medium p-3"
+                                >Contact Us</span
+                              >
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="packages">
+                      <span class="text-light fw-medium">Package Include:</span>
+                      <ul
+                        class="list-unstyled py-1 font-14 mb-0 text-light show-more-packages-custom"
+                      >
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Human-Verified Data</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Name</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Website</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Contact Name</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Business Email</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Contact Title</span>
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Contact Direct Line </span
+                          ><span class="off-white font-14">
+                            &nbsp;(Wherever Possible)</span
+                          >
+                        </li>
+                        <li class="d-md-flex align-items-center my-2">
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>LinkedIn Social Handle</span>
+                        </li>
+                        <!-- **** -->
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Twitter Social Handle</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Facebook Social Handle</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Phone</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ Address</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ City</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ State</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ Zip</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>HQ Country</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Industry</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Sub Industry</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Revenue Size</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Employee Size</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Job Level</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Seniority level</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Information</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Company Type</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Founded Year</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>SIC Code</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>NAICS Code</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>News & Media</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Products</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Technology User</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Acquisitions & Subsidiaries</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Funding</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Top Competitors</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Fortune</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/success.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Export contacts</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/circle.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>Assign the account manager</span>
+                        </li>
+                        <li
+                          class="d-md-flex align-items-center my-2 d-md-none d-none"
+                        >
+                          <img
+                            class="ms-1 me-2"
+                            src="./images/circle.png"
+                            alt=""
+                            width="7%"
+                          />
+                          <span>*24*7 Support on priority</span>
+                        </li>
+                      </ul>
+
+                      <a
+                        class="text-warning link-underline-warning fw-light cursor-pointer"
+                        onclick="toggleMorePackagesCustom()"
+                      >
+                        See More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CUSTOM ENQUIRY -->
+    <div id="enquiry" class="d-none">
+      <!-- title -->
+      <div id="title" class="text-center">
+        <div class="p-4 text-light fw-medium fs-3">Custom Enquiry</div>
+      </div>
+
+      <!-- main content -->
+      <div
+        id="custom-enq"
+        class="d-md-flex align-items-center justify-content-center"
+      >
+        <form
+          action="index.html"
+          method="post"
+          class="form-content my-4 p-md-4 p-sm-2 bg-white w-md-50 w-sm-100 mx-1 text-center"
+        >
+          <div class="row mb-2">
+            <div class="col-md-6 text-start">
+              <label
+                for="fname"
+                class="font-15 fw-normal d-blue-primary-color mb-1"
+                >First Name</label
+              ><br />
+              <input
+                class="p-2 w-100"
+                id="fname"
+                type="text"
+                placeholder="e.g., - 'Will'"
+                required
+              />
+            </div>
+            <div class="col-md-6 text-start">
+              <label
+                for="lname"
+                class="font-15 fw-normal d-blue-primary-color mb-1"
+                >Last Name</label
+              ><br />
+              <input
+                class="p-2 w-100"
+                id="lname"
+                type="text"
+                placeholder="e.g., - 'Smith'"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 text-start">
+              <label
+                for="email"
+                class="font-15 fw-normal d-blue-primary-color mb-1"
+                >Email</label
+              ><br />
+              <input
+                class="p-2 w-100"
+                id="email"
+                type="email"
+                placeholder="e.g., - 'willsmith@xyz.com'"
+                required
+              />
+            </div>
+            <div class="col-md-6 text-start">
+              <label
+                for="phone"
+                class="font-15 fw-normal d-blue-primary-color mb-1"
+                >Phone Number</label
+              ><br />
+              <div class="form-group d-inline-block d-flex">
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle border-end px-0 shadow-none border-none-end"
+                    type="button"
+                    data-toggle="dropdown"
+                  >
+                    <span class="text-dark p-0 country-code">-- </span>
+                    <img
+                      class="opacity-50"
+                      src="./images/down.png"
+                      alt=""
+                      width="20%"
+                    />
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li class="list-dropdown">
+                      <a class="dropdown-item" href="#" value="+47">+47</a>
+                    </li>
+                    <li class="list-dropdown">
+                      <a class="dropdown-item" href="#" value="+46">+46</a>
+                    </li>
+                    <li class="list-dropdown">
+                      <a class="dropdown-item" href="#" value="+79">+79</a>
+                    </li>
+                  </ul>
+                </div>
+                <input
+                  id="phone"
+                  type="tel"
+                  class="p-2 w-75"
+                  placeholder="91257888"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row pb-3">
+            <div class="col-md-12 text-start">
+              <label
+                for="message"
+                class="font-15 fw-normal d-blue-primary-color mb-1"
+                >Message</label
+              ><br />
+              <textarea
+                class="p-2 w-100"
+                id="message"
+                cols="1"
+                rows="5"
+                required
+              ></textarea>
+              <span class="font-15 d-blue-primary-color opacity-50"
+                >Maximum length 500 characters</span
+              >
+            </div>
+          </div>
+
+          <button
+            id="submitBtn"
+            type="submit"
+            class="submit-btn py-2 mt-1 w-100 fw-semibold text-light font-14"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- MODEL -->
+    <!-- free -->
+    <div class="model">
+      <div
+        class="modal fade"
+        id="popModelFree"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog pop-modal-dialog" role="document">
+          <div class="modal-content">
+            <div
+              class="modal-header d-flex align-items-end justify-content-end border-none p-0"
+            >
+              <button
+                type="button"
+                class="close text-decoration-none btn btn-link"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"
+                  ><img src="./images/close_black_24dp.svg" alt=""
+                /></span>
+              </button>
+            </div>
+            <div
+              class="modal-body py-md-2 px-md-5 border-none text-center fw-medium font-16 d-blue-secondary-color"
+            >
+              <img src="/images/Group 1425.svg" alt="" /><br />
+              <span class="fw-bold d-blue-primary-color font-24 p-2"
+                >Success!</span
+              ><br />
+              <span class="px-3"
+                >You have purchased our Free Subscription Plan. You can upgrade
+                your plan anytime from <span class="text-warning"> here.</span>
+              </span>
+            </div>
+            <div
+              class="modal-footer pb-4 d-md-flex justify-content-center border-none"
+            >
+              <button
+                type="button"
+                class="btn btn-warning text-light fw-semibold p-2 font-16 w-75"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                Go to the Dashboard
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Premium -->
+    <div class="model">
+      <div
+        class="modal fade"
+        id="popModelPremium"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog pop-modal-dialog" role="document">
+          <div class="modal-content">
+            <div
+              class="modal-header d-flex align-items-end justify-content-end border-none p-0"
+            >
+              <button
+                type="button"
+                class="close text-decoration-none btn btn-link"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"
+                  ><img src="./images/close_black_24dp.svg" alt=""
+                /></span>
+              </button>
+            </div>
+            <div
+              class="modal-body py-md-2 px-md-5 border-none text-center fw-medium font-16 d-blue-secondary-color"
+            >
+              <img src="/images/Group 1425.svg" alt="" /><br />
+              <span class="fw-bold d-blue-primary-color font-24 p-2"
+                >Success!</span
+              ><br />
+              <span class="px-3"
+                >You have purchased our Premium Subscription Plan. Check
+                dashboard and explore Contacts and companies
+              </span>
+            </div>
+            <div
+              class="modal-footer pb-4 d-md-flex justify-content-center border-none"
+            >
+              <button
+                type="button"
+                class="btn btn-warning text-light fw-semibold p-2 font-16 w-75"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                Go to the Dashboard
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enterprise -->
+    <div class="model">
+      <div
+        class="modal fade"
+        id="popModelEnterprise"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog pop-modal-dialog" role="document">
+          <div class="modal-content">
+            <div
+              class="modal-header d-flex align-items-end justify-content-end border-none p-0"
+            >
+              <button
+                type="button"
+                class="close text-decoration-none btn btn-link"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"
+                  ><img src="./images/close_black_24dp.svg" alt=""
+                /></span>
+              </button>
+            </div>
+            <div
+              class="modal-body py-md-2 px-md-5 border-none text-center fw-medium font-16 d-blue-secondary-color"
+            >
+              <img src="/images/Group 1425.svg" alt="" /><br />
+              <span class="fw-bold d-blue-primary-color font-24 p-2"
+                >Success!</span
+              ><br />
+              <span class="px-3"
+                >You have purchased our Enterprise Subscription Plan. Check
+                dashboard and explore Contacts and companies
+              </span>
+            </div>
+            <div
+              class="modal-footer pb-4 d-md-flex justify-content-center border-none"
+            >
+              <button
+                type="button"
+                class="btn btn-warning text-light fw-semibold p-2 font-16 w-75"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                Go to the Dashboard
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer" class="">
+      <div class="d-flex justify-content-between mx-md-5 mx-sm-1 font-14 py-2">
+        <div class="footer-copyright">
+          copyright © 2017 - 2022 contact sure all rights reserved
+        </div>
+
+        <div class="mx-4">
+          <span class="mx-md-3">Contact Us | Privacy Policy</span>
+          <span class="d-md-inline d-sm-block">
+            <i class="fa-brands fa-linkedin text-warning fa-lg mx-1"></i>
+            <i class="fa-brands fa-square-twitter text-warning fa-lg mx-1"></i>
+            <i class="fa-brands fa-square-facebook text-warning fa-lg mx-1"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap cdn -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>

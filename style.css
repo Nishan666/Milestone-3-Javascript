@@ -1,0 +1,300 @@
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+/* navbar */
+
+#navbar {
+  background-color: #05233b;
+}
+
+.nav-img {
+  width: 1.5rem;
+}
+
+.nav-img-profile {
+  width: 2rem;
+}
+
+.active {
+  background-color: #2d4f66;
+  border-radius: 4px;
+}
+
+.nav-dropdown-img {
+  width: 1rem;
+}
+
+.navbar-icon {
+  color: white;
+}
+
+.navbar-button {
+  border: none !important;
+  padding: 0;
+  outline: none;
+}
+
+.inactive:hover {
+  background-color: #2d4f66;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.width-nav {
+  width: 12rem;
+}
+
+/* title */
+
+#title {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(5, 33, 56, 1) 100%
+  );
+}
+
+/* main content */
+
+#free-pack {
+  padding-bottom: 34%;
+}
+
+#main-content {
+  background-color: #f7f3f0;
+}
+
+.main-text-color-g {
+  background: linear-gradient(
+    176deg,
+    rgba(255, 128, 0, 1) 0%,
+    rgba(255, 185, 35, 1) 100%
+  );
+  -webkit-background-clip: text; /* For Safari/Chrome/iOS */
+  color: transparent;
+  background-clip: text;
+}
+
+/* cards */
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.card-head-s {
+  color: #7b8699;
+  margin-bottom: -10px;
+}
+
+.card-head-l {
+  margin-top: -10px;
+}
+
+.cost-1 {
+  background-color: #f0f4f7;
+}
+
+.cost-2 {
+  background-color: #2d4f66;
+}
+
+#card-1 {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    163deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(236, 236, 235, 1) 100%
+  );
+}
+
+#card-2,
+#card-3,
+#card-4 {
+  background: rgb(5, 35, 59);
+  background: linear-gradient(
+    163deg,
+    rgba(5, 35, 59, 1) 0%,
+    rgba(42, 91, 124, 1) 100%
+  );
+}
+
+.off-white {
+  color: #bfcad3;
+}
+
+/* footer */
+
+#footer {
+  background-color: #f8eddb;
+  color: #7b8699;
+}
+
+/* custom enquiry */
+
+textarea,
+input {
+  background-color: #e4e9f2;
+  border: 1px solid #e4e9f2;
+  border-radius: 4px;
+}
+
+#custom-enq {
+  background-color: #f7f3f0;
+}
+
+.form-content {
+  border-radius: 12px;
+}
+
+.form-group input {
+  display: inline-block;
+  width: auto;
+  border: none;
+}
+
+.form-group {
+  background-color: #e4e9f2;
+  width: 100%;
+}
+
+.country-code {
+  padding: 1rem;
+  color: #8f9bb3;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  padding: 1rem;
+  color: #8f9bb3;
+  font-weight: 300;
+  letter-spacing: 0;
+  font-size: 14px;
+  opacity: 1;
+}
+
+textarea {
+  resize: none;
+}
+
+.dropdown {
+  width: 3rem;
+}
+
+ul.dropdown-menu {
+  background-color: #e4e7ed;
+  padding: 0;
+  width: auto;
+}
+
+a.dropdown-item {
+  color: #8f9bb3;
+  font-weight: 300;
+  letter-spacing: 0;
+  font-size: 14px;
+  opacity: 1;
+  width: 100%;
+}
+
+li.list-dropdown {
+  width: 100%;
+}
+
+.btn.dropdown-toggle::after {
+  display: none;
+  background-color: #e4e7ed;
+}
+
+.submit-btn {
+  background-color: #e4e7ed;
+  border: none;
+  border-radius: 4px;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.border-none-end {
+  border-top: none !important;
+  border-left: none !important;
+  border-bottom: none !important;
+}
+
+/* model */
+#popModelFree,
+#popModelEnterprise,
+#popModelPremium {
+  background-color: #c2c8d4;
+}
+
+.pop-modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.modal-content {
+  box-shadow: 0 0 20px #9fa1a7;
+}
+
+.model-btn {
+  width: 40%;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-35 {
+  font-size: 35px;
+}
+
+.font-15 {
+  font-size: 15px;
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.d-blue-primary-color {
+  color: #05233b;
+}
+
+.d-blue-secondary-color {
+  color: #2d4f66;
+}
+
+@media only screen and (max-device-width: 768px) {
+  ul.navbar-nav li {
+    margin: 5px;
+  }
+
+  ul.navbar-nav {
+    text-align: start;
+  }
+
+  #navbarSupportedContent > div {
+    text-align: end;
+  }
+
+  .pop-modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+  }
+}
